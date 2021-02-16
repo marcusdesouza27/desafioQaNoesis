@@ -1,0 +1,9 @@
+{
+    "defaultCommandTimeout": 10000,
+    "baseUrl": "https://www.unimed.coop.br/",
+    "watchForFileChanges": false,
+    "experimentalSourceRewriting": true,
+    "viewportWidth": 1536,
+    "viewportHeight": 960,
+    "projectId": "rc4g2a"
+}
