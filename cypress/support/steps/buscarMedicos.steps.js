@@ -15,12 +15,10 @@ When("usuario efetua uma pesquisa de medicos do Rio de Janeiro", () => {
     guiaMedico.validaPage();
     guiaMedico.buscaRapida('Médicos');
     guiaMedico.validaPesquisaLocalidade();
-    guiaMedico.buscaLocalidade('Rio de Janeiro', 'Rio de Janeiro');
-    guiaMedico.validaUnidade('UNIMED RIO')
-
+    guiaMedico.buscaLocalidade('Rio de Janeiro', 'Rio de Janeiro', 'UNIMED RIO');
 })
 
 Then("sera exibida uma lista de medicos disponiveis na area buscada", () => {
-    cy.wait(1)
+    guiaMedico.validaResultadoPesquisa('Rio de Janeiro');
 
 })
