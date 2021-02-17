@@ -1,0 +1,20 @@
+{
+    "urlBase": "http://www.omdbapi.com",
+    "projectId": "DesafioNoesis_backend",
+    "video": false,
+    "viewportWidth": 1280,
+    "viewportHeight": 800,
+    "global_timeout": 30000,
+    "experimentalNetworkStubbing": true,
+    "watchForFileChanges": false,
+    "apikey": "52ec71bf",
+    "i": "tt1285016",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "retries": {
+        "runMode": 2,
+        "openMode": 0
+    }
+}

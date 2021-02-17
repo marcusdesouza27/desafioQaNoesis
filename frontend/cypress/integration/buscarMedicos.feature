@@ -5,10 +5,12 @@ Feature: Consultar Medicos
     Background: Home Page
     Given usuario esta na homepage da unimed
 
-@focus @guiaMedicoRiodeJaneiro
+@guiaMedicoRiodeJaneiro
     Scenario: Buscar medicos
         When usuario efetua uma pesquisa de medicos do Rio de Janeiro
         Then sera exibida uma lista de medicos disponiveis na area buscada
 
 @buscaLocalidade
     Scenario: Validar Filtro por Localidade
+    When usuario efetua uma pesquisa de medicos do Rio de Janeiro
+    Then o resultado listado nao deve exibir a cidade Sao Paulo

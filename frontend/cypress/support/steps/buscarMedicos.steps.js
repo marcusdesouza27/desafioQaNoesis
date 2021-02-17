@@ -20,5 +20,9 @@ When("usuario efetua uma pesquisa de medicos do Rio de Janeiro", () => {
 
 Then("sera exibida uma lista de medicos disponiveis na area buscada", () => {
     guiaMedico.validaResultadoPesquisa('Rio de Janeiro');
+})
 
+Then("o resultado listado nao deve exibir a cidade Sao Paulo", () => {
+    guiaMedico.validarCidadeNaoExiste('São Paulo')
+    guiaMedico.navegarFwd();
 })

@@ -15,6 +15,8 @@ const labelUnidade = 'label[class="margin-bottom fonte-padrao"]'
 const radioUnidade = 'input[type="radio"]'
 const btnContinuar = 'button[class="btn btn-success"]'
 const resultado = position => `#resultado${position} > .resultado-resumido`
+const indiceProximo = 'a[class="proximo"]'
+const resultCity = desc => `//span[contains(.,"${desc}")]`
 
 export class GuiaMedico {
     validaPage() {
@@ -43,5 +45,13 @@ export class GuiaMedico {
         cy.get(resultado(0)).should('contain', cidade);
         cy.get(resultado(1)).should('contain', cidade);
         cy.get(resultado(2)).should('contain', cidade);
+    }
+
+    navegarFwd() {
+        cy.get(indiceProximo).click();
+    }
+
+    validarCidadeNaoExiste(cidade) {
+        cy.xpath(resultCity(cidade)).should("not.exist")
     }
 }
