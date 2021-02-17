@@ -1,7 +1,7 @@
 {
-    "name": "desafio_QA_Noesis_Backend",
+    "name": "Desafio_QA_Noesis_Backend",
     "version": "1.0.0",
-    "description": "Validar busca de dados via API",
+    "description": "Desafio Tecnico para avaliacao de QA",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,5 +1,5 @@
 {
-  "name": "desafio_tecnico_noesis",
+  "name": "Desafio_QA_Noesis_Frontend",
   "version": "1.0.0",
   "description": "Desafio Tecnico para avaliacao de QA",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "step_definitions": "cypress/support/steps"
   },
   "keywords": [],
-  "author": "Marcus Souza",
+  "author": "Marcus Henrique de Souza",
   "license": "ISC",
   "dependencies": {
     "cpf_cnpj": "^0.2.0",
