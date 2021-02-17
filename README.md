@@ -17,7 +17,7 @@ Desenvolvido em Cypress com Cucumber
 >> Setup:
 
 - baixar o projeto
-- cd/<pastadoprojeto>
+- Navegue até a pasta do projeto
 - rodar o comando: npm install --save-dev cypress cypress-cucumber-preprocessor
 
 Para executar o cypress:
