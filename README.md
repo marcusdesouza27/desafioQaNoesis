@@ -20,10 +20,16 @@ Para executar:
 - rodar o comando: npm install --save-dev cypress cypress-cucumber-preprocessor
 
 Para executar o cypress:
-- Execute o comando npx cypress open
-- Escolha um dos cenários e dê um duplo-click
 
-Para executar o teste em modo headless:
-- npm run test:chrome
+>> Frontend:
+    - Execute o comando npx cypress open
+    - Escolha um dos cenários e dê um duplo-click
 
+    Para executar o teste em modo headless:
+    - npm run test:chrome
+
+>> Backend:
+    - Execute o comando npx cypress run
+
+    
 Obrigado !
