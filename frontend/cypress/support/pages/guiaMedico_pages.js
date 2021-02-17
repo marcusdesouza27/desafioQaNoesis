@@ -25,39 +25,35 @@ export class GuiaMedico {
     }
 
     buscaRapida(filtroPesquisa) {
-        cy.get(inputPesquisa).type(filtroPesquisa);
-        cy.get(btnPesquisar).click();
+        cy.get(inputPesquisa, { timeout: Cypress.config().global_timeout }).type(filtroPesquisa);
+        cy.get(btnPesquisar, { timeout: Cypress.config().global_timeout }).click();
     }
 
     validaPesquisaLocalidade() {
-        cy.get(localidadeGuiMedico).should('contain', 'Selecione o estado e a cidade para localizar a Unimed onde você deseja ser atendido:');
+        cy.get(localidadeGuiMedico, { timeout: Cypress.config().global_timeout }).should('contain', 'Selecione o estado e a cidade para localizar a Unimed onde você deseja ser atendido:');
     }
 
     buscaLocalidade(estado, cidade) {
-        cy.get(selectEstado).click();
-        cy.get(conteudoEstado).contains(estado).click();
-        cy.get(selectCidadde).click();
-        cy.xpath(opcoesCidade).contains(cidade).click();
-        cy.get(radioUnidade).click();
-        cy.get(btnContinuar).click();
+        cy.get(selectEstado, { timeout: Cypress.config().global_timeout }).click();
+        cy.get(conteudoEstado, { timeout: Cypress.config().global_timeout }).contains(estado).click();
+        cy.get(selectCidadde, { timeout: Cypress.config().global_timeout }).click();
+        cy.xpath(opcoesCidade, { timeout: Cypress.config().global_timeout }).contains(cidade).click();
+        cy.get(radioUnidade, { timeout: Cypress.config().global_timeout }).click();
+        cy.get(btnContinuar, { timeout: Cypress.config().global_timeout }).click();
     }
 
     validaResultadoLocal(cidade) {
-        cy.get(resultado(0)).should('contain', cidade);
+        cy.get(resultado(0), { timeout: Cypress.config().global_timeout }).should('contain', cidade);
     }
 
     validaResultadoModalidade(filtro) {
         cy.get(resultModalidade, { timeout: Cypress.config().global_timeout }).should('contain', filtro)
     }
 
-    navegarFwd() {
-        cy.get(indiceProximo).click();
-    }
-
     validarCidadeNaoExiste(cidade) {
         var pagina = 0;
         for (pagina = 1; pagina <= 3; pagina++) {
-            cy.xpath(resultCity(cidade)).should("not.exist")
+            cy.xpath(resultCity(cidade), { timeout: Cypress.config().global_timeout }).should("not.exist")
             if(pagina < 3){
                 cy.get(indiceProximo,{ timeout: Cypress.config().global_timeout }).click();
             }            

@@ -14,6 +14,6 @@ export class HomePage {
     }
 
     loadGuiaMedico(){
-        cy.get(menuGuiaMedico).click();
+        cy.get(menuGuiaMedico, { timeout: Cypress.config().global_timeout }).click();
     }
 }
