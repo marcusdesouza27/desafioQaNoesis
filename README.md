@@ -14,9 +14,10 @@ celular: 11 93236-1991
 Desenvolvido em Cypress com Cucumber
 
 
-Para executar:
+>> Setup:
 
 - baixar o projeto
+- cd/<pastadoprojeto>
 - rodar o comando: npm install --save-dev cypress cypress-cucumber-preprocessor
 
 Para executar o cypress:
