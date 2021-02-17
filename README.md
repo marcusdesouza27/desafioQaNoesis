@@ -24,15 +24,16 @@ Para executar o cypress:
 
 >> Frontend:
 
-    - Execute o comando npx cypress open
-    - Escolha um dos cenários e dê um duplo-click
+Para executar usando o playground do Cypress:
+- Execute o comando npx cypress open
+- Escolha um dos cenários e dê um duplo-click
 
-    Para executar o teste em modo headless:
-    - npm run test:chrome
+Para executar o teste em modo headless:
+- npm run test:chrome
 
 >> Backend:
 
-    - Execute o comando npx cypress run
+- Execute o comando npx cypress run
 
     
 Obrigado !
