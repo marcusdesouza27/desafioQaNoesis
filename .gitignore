@@ -40,8 +40,12 @@ build/Release
 # Dependency directories
 cypress/videos/
 cypress/screenshots/
-desafioQaNoesis/backend/node_modules
-desafioQaNoesis/frontend/node_modules
+/backend/cypress/screenshots/*
+frontend/cypress/screenshots/*
+/backend/cypress/videos/*
+/frontend/cypress/videos/*
+/backend/node_modules
+/frontend/node_modules
 
 # TypeScript v1 declaration files
 typings/
@@ -107,3 +111,4 @@ dist
 debug.log
 debug.log
 node_modules
+frontend/cypress/videos/buscarMedicos.feature.mp4

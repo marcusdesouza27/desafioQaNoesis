@@ -18,7 +18,6 @@ const resultado = position => `#resultado${position} > .resultado-resumido`
 const indiceProximo = 'a[class="proximo"]'
 const resultCity = desc => `//span[contains(.,"${desc}")]`
 const resultModalidade = 'p[class="tr5"]'
-const paginaAtual = 'li[class="active"]'
 
 export class GuiaMedico {
     validaPage() {

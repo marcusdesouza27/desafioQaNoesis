@@ -10,7 +10,7 @@ Feature: Consultar Medicos
         When usuario efetua uma pesquisa de medicos do Rio de Janeiro
         Then sera exibida uma lista de medicos disponiveis na area buscada
 
-@buscaLocalidade
+@buscaLocalidadeSP
     Scenario: Validar Filtro por Localidade
     When usuario efetua uma pesquisa de medicos do Rio de Janeiro
     Then nao deve exibir a cidade Sao Paulo nas paginas de 1 a 3

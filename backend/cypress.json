@@ -1,7 +1,7 @@
 {
     "urlBase": "http://www.omdbapi.com",
     "projectId": "DesafioNoesis_backend",
-    "video": false,
+    "watchForFileChanges": false,
     "viewportWidth": 1280,
     "viewportHeight": 800,
     "global_timeout": 30000,
