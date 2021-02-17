@@ -13,4 +13,4 @@ Feature: Consultar Medicos
 @buscaLocalidade
     Scenario: Validar Filtro por Localidade
     When usuario efetua uma pesquisa de medicos do Rio de Janeiro
-    Then o resultado listado nao deve exibir a cidade Sao Paulo
+    Then nao deve exibir a cidade Sao Paulo nas paginas de 1 a 3

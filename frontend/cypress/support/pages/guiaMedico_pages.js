@@ -17,12 +17,14 @@ const btnContinuar = 'button[class="btn btn-success"]'
 const resultado = position => `#resultado${position} > .resultado-resumido`
 const indiceProximo = 'a[class="proximo"]'
 const resultCity = desc => `//span[contains(.,"${desc}")]`
+const resultModalidade = 'p[class="tr5"]'
+const paginaAtual = 'li[class="active"]'
 
 export class GuiaMedico {
     validaPage() {
         cy.get(currentPagebar, { timeout: Cypress.config().global_timeout }).should('contain', 'Guia Médico')
     }
-    
+
     buscaRapida(filtroPesquisa) {
         cy.get(inputPesquisa).type(filtroPesquisa);
         cy.get(btnPesquisar).click();
@@ -41,10 +43,12 @@ export class GuiaMedico {
         cy.get(btnContinuar).click();
     }
 
-    validaResultadoPesquisa(cidade) {
+    validaResultadoLocal(cidade) {
         cy.get(resultado(0)).should('contain', cidade);
-        cy.get(resultado(1)).should('contain', cidade);
-        cy.get(resultado(2)).should('contain', cidade);
+    }
+
+    validaResultadoModalidade(filtro) {
+        cy.get(resultModalidade, { timeout: Cypress.config().global_timeout }).should('contain', filtro)
     }
 
     navegarFwd() {
@@ -52,6 +56,12 @@ export class GuiaMedico {
     }
 
     validarCidadeNaoExiste(cidade) {
-        cy.xpath(resultCity(cidade)).should("not.exist")
+        var pagina = 0;
+        for (pagina = 1; pagina <= 3; pagina++) {
+            cy.xpath(resultCity(cidade)).should("not.exist")
+            if(pagina < 3){
+                cy.get(indiceProximo,{ timeout: Cypress.config().global_timeout }).click();
+            }            
+        }
     }
 }
