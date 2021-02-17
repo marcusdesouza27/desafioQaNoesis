@@ -22,6 +22,7 @@ Para executar:
 Para executar o cypress:
 
 >> Frontend:
+
     - Execute o comando npx cypress open
     - Escolha um dos cenários e dê um duplo-click
 
@@ -29,6 +30,7 @@ Para executar o cypress:
     - npm run test:chrome
 
 >> Backend:
+
     - Execute o comando npx cypress run
 
     
